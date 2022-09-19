@@ -15,7 +15,7 @@
 		A6D9F51628D6362B00ECC527 /* MainCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9F51528D6362A00ECC527 /* MainCollection.swift */; };
 		A6D9F51828D7777D00ECC527 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9F51728D7777D00ECC527 /* MainCell.swift */; };
 		A6D9F51D28D78C6100ECC527 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9F51C28D78C6100ECC527 /* Hero.swift */; };
-		A6D9F52028D7BD3300ECC527 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9F51F28D7BD3300ECC527 /* Team.swift */; };
+		A6D9F52028D7BD3300ECC527 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9F51F28D7BD3300ECC527 /* Apod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		A6D9F51528D6362A00ECC527 /* MainCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollection.swift; sourceTree = "<group>"; };
 		A6D9F51728D7777D00ECC527 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		A6D9F51C28D78C6100ECC527 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
-		A6D9F51F28D7BD3300ECC527 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		A6D9F51F28D7BD3300ECC527 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A6D9F51C28D78C6100ECC527 /* Hero.swift */,
-				A6D9F51F28D7BD3300ECC527 /* Team.swift */,
+				A6D9F51F28D7BD3300ECC527 /* Apod.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D9F52028D7BD3300ECC527 /* Team.swift in Sources */,
+				A6D9F52028D7BD3300ECC527 /* Apod.swift in Sources */,
 				A6D9F51628D6362B00ECC527 /* MainCollection.swift in Sources */,
 				A6D9F50228D6350C00ECC527 /* AppDelegate.swift in Sources */,
 				A6D9F50428D6350C00ECC527 /* SceneDelegate.swift in Sources */,

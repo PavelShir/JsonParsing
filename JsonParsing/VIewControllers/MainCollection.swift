@@ -9,12 +9,12 @@ import UIKit
 
 enum Link: String {
     case heroes = "https://api.opendota.com/api/heroes"
-    case teams = "https://api.opendota.com/api/teams/id=1"
+    case apod = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=1"
 }
 
 enum UserAction: String, CaseIterable {
     case goToHeroes = "Heroes"
-    case goToTeams = "Teams"
+    case goToFoto = "Apods"
 }
 
 class MainCollection: UICollectionViewController {
@@ -24,13 +24,6 @@ class MainCollection: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-   //     // Register cell classes
-   //     self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-
-        // Do any additional setup after loading the view.
     }
 
     private func getHero() {
@@ -54,8 +47,8 @@ class MainCollection: UICollectionViewController {
         }
         .resume()
     }
-    private func getTeam() {
-        guard let url = URL(string: Link.teams.rawValue) else { return }
+    private func getApod() {
+        guard let url = URL(string: Link.apod.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
@@ -66,7 +59,7 @@ class MainCollection: UICollectionViewController {
             let jsonDecoder = JSONDecoder()
         
             do {
-                let _ = try jsonDecoder.decode(Team.self, from: data)
+                let _ = try jsonDecoder.decode([Apod].self, from: data)
                 self.successAlert()
             } catch {
                 print(error.localizedDescription)
@@ -78,10 +71,6 @@ class MainCollection: UICollectionViewController {
     
     
     // MARK: UICollectionViewDataSource
-
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        3
-//    }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -102,12 +91,11 @@ class MainCollection: UICollectionViewController {
         
         switch userAction {
         case .goToHeroes: getHero()
-        case .goToTeams: getTeam()
+        case .goToFoto: getApod()
         }
     }
 
         
-       
 }
 
 extension MainCollection {
