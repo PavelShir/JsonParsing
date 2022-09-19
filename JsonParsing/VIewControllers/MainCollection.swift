@@ -50,7 +50,7 @@ class MainCollection: UICollectionViewController {
     private func getApod() {
         guard let url = URL(string: Link.apod.rawValue) else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
             print(error?.localizedDescription ?? "No error description")
             return
@@ -61,6 +61,7 @@ class MainCollection: UICollectionViewController {
             do {
                 let _ = try jsonDecoder.decode([Apod].self, from: data)
                 self.successAlert()
+                
             } catch {
                 print(error.localizedDescription)
                 self.failedAlert()
